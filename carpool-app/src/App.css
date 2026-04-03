@@ -1,0 +1,292 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f4f4;
+  color: #111;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: #000;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.header-left {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.brand-white {
+  color: #ffffff;
+}
+
+.brand-yellow {
+  color: #f9c800;
+}
+
+/* RIGHT SIDE BUTTONS */
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.home-btn,
+.switch-btn {
+  border: none;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* SWITCH BUTTON */
+.switch-btn {
+  background: #f9c800;
+  color: #000;
+}
+
+/* HOME BUTTON */
+.home-btn {
+  background: #ffffff;
+  color: #000;
+}
+
+
+/* ===== HOME PAGE ===== */
+.home-container {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.home-container h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.choice-box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.choice-card {
+  width: 260px;
+  padding: 32px 26px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.choice-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+}
+
+.choice-card.driver {
+  background: #000;
+  color: #fff;
+}
+
+.choice-card.rider {
+  background: #f9c800;
+  color: #000;
+}
+
+.choice-card h2 {
+  margin-bottom: 8px;
+}
+
+/* ===== AUTH (LOGIN / SIGNUP) ===== */
+.auth-page {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background: #fff;
+  width: 340px;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.primary-btn {
+  width: 100%;
+  background: #f9c800;
+  border: none;
+  padding: 11px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+  padding: 24px;
+}
+
+.dashboard h2 {
+  margin-bottom: 12px;
+}
+
+.map-img {
+  width: 100%;
+  border-radius: 14px;
+  margin: 18px 0;
+}
+
+/* ===== RIDE CARD ===== */
+.ride-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ride-top {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.price {
+  color: #f9c800;
+}
+
+.ride-route {
+  margin: 16px 0;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.pickup {
+  background: green;
+}
+
+.drop {
+  background: red;
+}
+
+.line {
+  height: 20px;
+  border-left: 2px dashed #ccc;
+  margin-left: 4px;
+}
+
+.ride-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.auth-card select {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.large-card {
+  width: 420px;
+}
+
+.map-wrapper {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.large-card {
+  width: 420px;
+}
+
+.map-wrapper {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 340px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.large-card {
+  width: 420px;
+}
+
+.map-wrapper {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 340px;
+  border-radius: 14px;
+  overflow: hidden;
+}
