@@ -50,23 +50,22 @@ io.on("connection", (socket) => {
 // =============================
 app.use(express.json());
 
+const cors = require("cors");
+
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://unilift-frontend.vercel.app",
+  "https://unilift.vercel.app"
 ];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("CORS not allowed"));
-      }
-    },
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed"));
+    }
+  }
+}));
 
 // =============================
 // SESSION
