@@ -49,9 +49,6 @@ io.on("connection", (socket) => {
 // MIDDLEWARE
 // =============================
 app.use(express.json());
-
-const cors = require("cors");
-
 const allowedOrigins = [
   "http://localhost:3000",
   "https://unilift.vercel.app"
