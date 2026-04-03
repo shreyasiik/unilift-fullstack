@@ -14,7 +14,7 @@ function AvailableRides() {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      `http://localhost:5000/api/bookings/request/${rideId}`,
+      `${process.env.REACT_APP_API_URL}/api/bookings/request/${rideId}`,
       {
         method: "POST",
         headers: {
@@ -42,7 +42,7 @@ function AvailableRides() {
   useEffect(() => {
     const fetchRides = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/rides");
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/rides`);
         const data = await res.json();
 
         console.log("RIDES API:", data);
@@ -60,6 +60,7 @@ function AvailableRides() {
 
     fetchRides();
   }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
   const checkStatus = async () => {
     try {
@@ -69,7 +70,7 @@ function AvailableRides() {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://localhost:5000/api/bookings/${id}`,
+        `${process.env.REACT_APP_API_URL}/api/bookings/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
