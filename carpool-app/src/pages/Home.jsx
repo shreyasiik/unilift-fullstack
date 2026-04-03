@@ -5,6 +5,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
+    
     <>
       <Header />
 
@@ -32,5 +33,5 @@ function Home() {
     </>
   );
 }
-
+console.log("ENV RAW:", process.env.REACT_APP_API_URL);
 export default Home;

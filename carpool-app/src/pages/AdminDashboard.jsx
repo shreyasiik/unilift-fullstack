@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://localhost:5000/api/admin";
+const API = process.env.REACT_APP_API_URL?.replace(/\/$/, "");
 
 function AdminDashboard() {
   const [tab, setTab] = useState("users");
@@ -94,7 +94,7 @@ function AdminDashboard() {
     const confirmDelete = window.confirm("Are you sure you want to delete this ride?");
     if (!confirmDelete) return;
 
-    await fetch(`http://localhost:5000/api/admin/delete-ride/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/api/admin/delete-ride/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -118,7 +118,7 @@ const deleteSelectedRides = async () => {
   if (!confirmDelete) return;
 
   try {
-    await fetch("http://localhost:5000/api/admin/delete-rides", {
+    await fetch(`${process.env.REACT_APP_API_URL}/api/admin/delete-rides`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
