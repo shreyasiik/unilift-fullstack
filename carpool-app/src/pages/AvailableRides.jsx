@@ -96,7 +96,7 @@ function AvailableRides() {
   const interval = setInterval(checkStatus, 3000);
 
   return () => clearInterval(interval);
-}, []); // ✅ no navigate here
+}, [navigate]); // ✅ no navigate here
 
   // 🔥 APPLY FILTERS
   const applyFilters = () => {
